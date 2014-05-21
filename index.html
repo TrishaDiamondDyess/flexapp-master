@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <!-- CHANGE THIS TITLE TAG -->
-<title>MoLoApp - A Loyalty and Rewards Application</title>
+<title>Logistics on Legs</title>
 
 <!-- media-queries.js -->
 <!--[if lt IE 9]>
@@ -25,8 +25,9 @@
 
 <meta name="viewport" content="width=device-width" />
  
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <link href='http://fonts.googleapis.com/css?family=Exo:400,800' rel='stylesheet' type='text/css'>
 
 </head>
@@ -39,7 +40,7 @@
 		<div class="container">
 	
 			<a class="brand pull-left" href="#">
-			MoLoApp
+			Logistics on Legs
 			</a>
 	
 			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -50,12 +51,10 @@
 		
 			<div class="nav-collapse collapse">
 				<ul id="nav-list" class="nav pull-right">
-					<li><a href="#Profile">Profile</a></li>
-					<li><a href="#Coupons">Coupons</a></li>
-					<li><a href="#Points">Points</a></li>
-					<li><a href="#CheckIn">Check-in</a></li>
-					<li><a href="#Capture">Capture</a></li>
-					<li><a href="#Locate">Locate</a></li>
+					<li><a href="#Scan">Scan</a></li>
+					<li><a href="#Add">Add Inventory</a></li>
+					<li><a href="#Relocate">Relocate Inventory</a></li>
+					<li><a href="#Release">Release Inventory</a></li>
 				</ul>
 			</div>
 		
@@ -67,181 +66,64 @@
 <!-- MAIN CONTENT -->
 <div class="container content container-fluid" id="home">
 
-
-
-	<!-- HOME -->
-	<div class="row-fluid">
-  
-		<!-- PHONES IMAGE FOR DESKTOP MEDIA QUERY -->
-		<div class="span5 visible-desktop">
-			<img src="img/phones.png">
-		</div>
-	
-		<!-- APP DETAILS -->
-		<div class="span7">
-	
-			<!-- ICON -->
-			<div class="visible-desktop" id="icon">
-				<img src="img/app_icon.png" />
-			</div>
-			
-			<!-- APP NAME -->
-			<div id="app-name">
-				<h1>MoLo App</h1>
-			</div>
-			
-			<!-- VERSION -->
-			<div id="version">
-				<span class="version-top label label-inverse">Version 1.0</span>
-			</div>
-            
-			<!-- TAGLINE -->
-			<div id="tagline">
-				Your favorite Mobile App for Loyalty and Rewards
-			</div>
-		
-			<!-- PHONES IMAGE FOR TABLET MEDIA QUERY -->
-			<div class="hidden-desktop" id="happy">
-				<img src="img/happy.png">
-			</div>
-            
-			<!-- DESCRIPTION -->
-			<div id="description">
-				MoLo App is the newest Loyalty and Rewards program.  
-			</div>
-            
-			<!-- FEATURES -->
-			<ul id="features">
-				<li>Rewards point balance displayed on your phone</li>
-				<li>QR Codes sent to your app from in-store redemption (No more printing!!!)</li>
-				<li>Reminders and alerts sent using SMS</li>
-				<li></li>
-			</ul>
-		
-			
-		</div>
-	</div>
-	
-	
-	
-	<!-- Profile & UPDATES -->
-	<div class="row-fluid" id="Profile">
+	<!-- GENERAL SCAN -->
+	<div class="row-fluid" id="Scan">
 	
 		<div class="span6">
 			<h2 class="page-title" id="scroll_up">
-				Profile
+				Point the scanner and scan!!!
 				<a href="#home" class="arrow-top">
 				<img src="img/arrow-top.png">
 				</a>
 			</h2>
-			<label>Hello Trisha</label>
-			<label>Last check in at Hair Cuttery was 01-10-2014</label>
-			<p>Thank you for using MoLo!</p>
-			
-			
-		</div>
-	<script type="text/javascript">
-		function showExpiring()
-		{ 
-			document.getElementById("hiddenCoupon").innerHTML = '<img src="/img/qrcode.png"/>';			
-		}
-	 </script>
-	 
-		<div class="span6 updates" id="Coupons">
-			<h2 class="page-title" id="scroll_up">
-				Coupons
-				<a href="#home" class="arrow-top">
-				<img src="img/arrow-top.png">
-				</a>
-			</h2>
-			
-			<!-- UPDATES & RELEASE NOTES -->
-			<a href="#coupons" id="cpExp" onclick="showExpiring()">You have an expiring coupon</a></br>
-			<input type="radio"id="cpNew" onclick="showNew()">You have a new coupon</a>
-			
-			<div id="hiddenCoupon">
-			<!-- <iframe src="C:\Users\tddyess\MoLoApp\flexapp-master\img\qrcode.png" width="600" height="250" frameborder="0" scrolling="no"></iframe> -->
-			<img src="img/qrcode.png"/>
-			<div>
-		</div>
-	
-	</div>
-	
-	
-	
-	<!-- SCREENSHOTS -->
-	<div class="row-fluid" id="Points">
-		
-		<h2 class="page-title" id="scroll_up">
-				Points
-				<a href="#home" class="arrow-top">
-				<img src="img/arrow-top.png">
-				</a>
-			</h2>
-		<div id="total_points">
-		<table>
-		<tr><td>Activity</td><td>Possible Points</td><td>Earned Points</td></tr>
-		<tr><td>Check In</td><td>1</td><td id="pntCheck">0</td></tr>
-		<tr><td>Like us on FaceBook</td><td>1</td><td id="pntLike">0</td></tr>
-		<tr><td>Share the link to Download MoLo on FaceBook</td><td>2</td><td id="pntShare">0</td></tr>
-		<tr><td>Comment on our page in FaceBook</td><td>3</td><td id="pntComment">0</td></tr>
-		<tr><td>Promote us on FaceBook</td><td>4</td><td id="pntPromo">0</td></tr>
-		</table>
-		</div>
-		
-	</div>
-	
-	
-	
-	<!-- CONTACT -->
-	<div class="row-fluid" id="CheckIn">
-	
-		<h2 class="page-title" id="scroll_up">
-				Check-In
-				<a href="#home" class="arrow-top">
-				<img src="img/arrow-top.png">
-				</a>
-			</h2>
-		
-		<!-- CONTACT INFO -->
-		
-					<div class="form-actions">
-						<button type="submit" class="btn btn-primary" onclick="pointEarned()">Check In</button>
-						<div id="pointEarned"></div>
-					</div>
-		</div>
-		
-	
-	<div class="row-fluid" id="Capture">
-	
-		<h2 class="page-title" id="scroll_up">
-				Capture
-				<a href="#home" class="arrow-top">
-				<img src="img/arrow-top.png">
-				</a>
-			</h2>
-			<div class="form-actions">
-			<input type="submit" id="QRscan" class="btn btn-primary" value="Open QR Reader" 
+			<p>This is where we can scan something and find out general data about it.</p>
+			<input type="submit" id="QRscan" class="btn btn-primary" value="Scan It!" 
         class="off" onclick="openReader()" />
-		</div>				
-		
-	</div>
-	<div class="row-fluid" id="Locate">
+			<p id="scanResult"></p>
+
+		</div>
 	
+	<!-- ADD -->
+	<div class="row-fluid" id="Add">
+		
 		<h2 class="page-title" id="scroll_up">
-				Locate
+				Add New Inventory
 				<a href="#home" class="arrow-top">
 				<img src="img/arrow-top.png">
 				</a>
 			</h2>
-<div class="form-actions">
-			<input type="submit" id="geolocation" class="btn btn-primary" value="Find nearest location" 
-        class="off" onclick="openReader()" />
-		</div>	
-    <p id="geolocation">Finding geolocation...</p>
-  
-		
+			<p>Use this for transferring inventory from a truck to the warehouse</p>
+				<button type="submit" class="btn btn-primary" onclick="relocate()">Add It!</button>
+				<div id="pointEarned"></div>		
 	</div>
+	
+	<!-- RELOCATE -->
+	<div class="row-fluid" id="Relocate">
+	
+		<h2 class="page-title" id="scroll_up">
+				Relocate Inventory
+				<a href="#home" class="arrow-top">
+				<img src="img/arrow-top.png">
+				</a>
+		</h2>
+		<p>Use this for transferring inventory inside the warehouse</p>		
+		<button type="submit" class="btn btn-primary" onclick="relocate()">Move It!</button>
+	</div>
+		
+	<!-- RELEASE -->
+	<div class="row-fluid" id="Release">
+	
+		<h2 class="page-title" id="scroll_up">
+				Release Inventory
+				<a href="#home" class="arrow-top">
+				<img src="img/arrow-top.png">
+				</a>
+		</h2>
+		<p>Use this for inventory removal</p>
+		<button type="submit" class="btn btn-primary" onclick="release()">Let It Go!</button>
+	</div>
+	
+	
 </div>
 
 
@@ -286,6 +168,20 @@
         }
      </script>
 	 <script type="text/javascript">
+	 function ScanSomething()
+	 {
+	 var captureUI = new Windows.Media.Capture.CameraCaptureUI();
+      captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
+         if (capturedItem) {
+             document.getElementById("message").innerHTML = "User captured a photo."
+         }
+         else {
+             document.getElementById("message").innerHTML = "User didn't capture a photo."
+         }
+      });
+	 }
+	 </script>
+	 <script type="text/javascript">
 	 function openReader()
 	 {
 		captureImage();
@@ -293,8 +189,8 @@
 	 </script>
   <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8" src="json2.js"></script>
+	<script type="text/javascript" charset="utf-8" src="jquery.mobile-1.4.2"></script>
     <script type="text/javascript" charset="utf-8">
-
     // Called when capture operation is finished
     //
     function captureSuccess(mediaFiles) {
